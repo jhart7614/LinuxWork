@@ -1,0 +1,22 @@
+#!/bin/bash
+read $a
+
+declare -a arrayVar=({1..$a})
+
+for i in ${arrayVar[@]}
+do
+if [[ $((i%3)) -eq 0 && $((i%5)) -eq 0 ]]
+then 
+echo "FizzBuzz!"
+else
+if [ $((i%3)) -eq 0 ]
+then 
+echo "Fizz!"
+elif [ $((i%5)) -eq 0 ]
+then
+echo "Buzz!"
+else
+echo $i
+fi
+fi
+done

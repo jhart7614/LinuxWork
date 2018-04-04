@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+read num
+
+looper=1
+
+while [ $looper -le $num ] 
+
+do
+echo $looper
+((looper++))
+done

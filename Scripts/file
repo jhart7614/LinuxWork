@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mkdir Scripts1
+cd Scripts1
+touch file1 file2
+sudo mv file1 /home
+sudo chmod +x file2
+sudo echo pwd >> file2
+sudo echo  apt-get install yum >> file2
+sudo ./file2
