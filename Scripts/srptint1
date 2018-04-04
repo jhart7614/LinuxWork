@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Enter User Name"
-read $username
-
+read username
 
 useradd -m $username
+grep $username /etc/passwd
 sudo passwd $username
 su $username
