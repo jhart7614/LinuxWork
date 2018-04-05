@@ -1,0 +1,24 @@
+#!/bin/bash
+# redirect stdout/stderr to a file
+
+date
+echo '-----------'
+w
+echo '-----------'
+
+
+if [[ -f logfile.txt ]]; then
+read -p "File logfile exists. Do you want to delete? [y/n]" delete
+if [[ $delete == [yY] ]]; then
+rm "logfile.txt" && echo "File deleted"
+fi
+else
+echo "File logfile.txt does not exist"
+fi
+
+exec&> logfile.txt
+date
+echo '-----------'
+w
+echo '-----------'
+
